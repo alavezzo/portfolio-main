@@ -34,7 +34,7 @@ export default function CaptionCarousel( {photos}) {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            backgroundImage={`url(${card.image})`}>
+            backgroundImage={card.image}>
             {/* This is the block you need to change, to customize the caption */}
             <Flex paddingLeft={20} paddingRight={20} flexDirection={"row"}>
             <Container size="container.lg" height="400px" position="relative">

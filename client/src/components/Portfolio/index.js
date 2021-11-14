@@ -2,6 +2,10 @@ import React from 'react';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import Project from '../Project';
 import CaptionCarousel from '../Carousel';
+import yellow from '../../assets/backgrounds/yellow.jpg'
+import pink from '../../assets/backgrounds/pink.jpg'
+import blue from '../../assets/backgrounds/blue.jpg'
+import { PinInputField } from '@chakra-ui/pin-input';
 
 const Portfolio = () => {
 
@@ -10,8 +14,7 @@ const Portfolio = () => {
     const photos = [
         {
             text: 'Crowdsourced Covid-19 safety reviews of local venues. Built with a MVC framework using Handlebars, Express, MySql, and Node',
-            image:
-              'https://images.unsplash.com/photo-1636898611447-56ddc118a834?ixid=MnwyNzU2MjJ8MHwxfGFsbHx8fHx8fHx8fDE2MzY5MjMwNTg&ixlib=rb-1.2.1',
+            image: yellow,
             name: 'Covid Venue Tracker',
             href: 'https://venue-covid-tracker.herokuapp.com/',
             github: 'http://github.com/alavezzo/covid-app#readme',
@@ -23,8 +26,7 @@ const Portfolio = () => {
             title: 'Design Projects 2',
             text:
               "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-            image:
-              'https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?ixid=MnwyNzU2MjJ8MHwxfGFsbHx8fHx8fHx8fDE2MzY5MjE1NTg&ixlib=rb-1.2.1',
+            image: blue,
               name: 'Cocktail and Music Pairings',
               href: 'https://alavezzo.github.io/prism/',
               github: 'https://github.com/alavezzo/prism#readme',
@@ -36,8 +38,7 @@ const Portfolio = () => {
             title: 'Design Projects 3',
             text:
               "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-            image:
-              'https://images.unsplash.com/photo-1636896760747-41ebf945701f?ixid=MnwyNzU2MjJ8MHwxfGFsbHx8fHx8fHx8fDE2MzY5MjE3NjQ&ixlib=rb-1.2.1',
+            image: pink,
             name: 'Employee Database Interface',
             href: 'https://github.com/alavezzo/employee-tracker#readme',
             github: 'https://github.com/alavezzo/employee-tracker#readme',

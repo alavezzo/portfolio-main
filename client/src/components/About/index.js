@@ -18,7 +18,7 @@ export default function About() {
     
         </Box>
         <Box>
-        <Image boxSize={"500px"} maxH='50%' alignSelf='center' src={'https://github.com/alavezzo/portfolio-main/blob/main/client/src/assets/icons/my_character%20(1).svg?raw=true'}/>
+        <Image boxSize={"500px"} maxH='50%' alignSelf='center' src={require('../../assets/icons/my_character (1).svg').default}/>
         </Box>
     </Flex>
   );
