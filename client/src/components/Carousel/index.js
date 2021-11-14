@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Project from '../Project';
 import {
+  Link,
   Box,
   IconButton,
   useBreakpointValue,
@@ -9,10 +10,12 @@ import {
   Text,
   Flex,
   Container,
-  Spacer
+  Icon,
+  Circle
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import { FaGithub } from 'react-icons/fa';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
 
@@ -43,12 +46,10 @@ export default function CaptionCarousel() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'Design Projects 1',
-      text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: 'Crowdsourced Covid-19 safety reviews of local venues. Built with a MVC framework using Handlebars, Express, MySql, and Node',
       image:
-        'https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-      name: 'Crowdsourced Covid Venue Reviews',
+        'https://images.unsplash.com/photo-1636898611447-56ddc118a834?ixid=MnwyNzU2MjJ8MHwxfGFsbHx8fHx8fHx8fDE2MzY5MjMwNTg&ixlib=rb-1.2.1',
+      name: 'Covid Venue Tracker',
       href: 'https://venue-covid-tracker.herokuapp.com/',
       github: 'covid-app',
       alt: 'Covid Venue Tracker SplashPage',
@@ -59,7 +60,7 @@ export default function CaptionCarousel() {
       text:
         "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
       image:
-        'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
+        'https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?ixid=MnwyNzU2MjJ8MHwxfGFsbHx8fHx8fHx8fDE2MzY5MjE1NTg&ixlib=rb-1.2.1',
         name: 'Cocktail and Music Pairings',
         href: 'https://alavezzo.github.io/prism/',
         github: 'prism',
@@ -71,7 +72,12 @@ export default function CaptionCarousel() {
       text:
         "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
       image:
-        'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+        'https://images.unsplash.com/photo-1636896760747-41ebf945701f?ixid=MnwyNzU2MjJ8MHwxfGFsbHx8fHx8fHx8fDE2MzY5MjE3NjQ&ixlib=rb-1.2.1',
+      name: 'Employee Database Interface',
+      href: 'https://github.com/alavezzo/employee-tracker#readme',
+      github: 'employee-tracker',
+      alt: 'Interface Depiction',
+      src: 'https://media.giphy.com/media/qAVT2mN2FY1FJgp8tg/giphy.gif'
     },
   ];
 
@@ -129,7 +135,7 @@ export default function CaptionCarousel() {
             backgroundSize="cover"
             backgroundImage={`url(${card.image})`}>
             {/* This is the block you need to change, to customize the caption */}
-            <Flex flexDirection={"row"}>
+            <Flex paddingLeft={20} paddingRight={20} flexDirection={"row"}>
             <Container size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}
@@ -144,15 +150,23 @@ export default function CaptionCarousel() {
                 <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
                   {card.text}
                 </Text>
+                <Circle
+                          size="40px"
+                          top={4}
+                          right={4}
+                          bg="red.200"
+                      ><Link href={card.github} >
+                      <Icon as={FaGithub}/>
+                      </Link> </Circle>
               </Stack>
               </Container>
-              <Project alt={card.alt}
+              <Project 
+              alt={card.alt}
          key={card.name}
          name={card.name}
          github={card.github}
          href={card.href}
          src={card.src} display={false}></Project>
-      
             </Flex>
           </Box>
         ))}

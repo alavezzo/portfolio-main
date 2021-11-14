@@ -11,7 +11,9 @@ const Project = (props) => {
         <>
         
         <Flex flexDirection={"row"}>
-        {props.display && (<Link href={props.href} isExternal>
+        {props.display && (
+        <Box position={'relative'}>
+        <Link href={props.href} isExternal>
                         <Box  p="8">
                             <Box d="flex">
                                 <Text color={'midnightGreen'} m={"auto"}>
@@ -19,22 +21,24 @@ const Project = (props) => {
                                 </Text>
                             </Box>
                         </Box>
-            </Link>)}
+            </Link>
+            <Circle
+            size="40px"
+            position="absolute"
+            top={4}
+            right={4}
+            bg="red.200"
+        ><Link href={props.github} isExternal>
+        <Icon as={FaGithub}/>
+        </Link> </Circle>
+        </Box>
+        )}
             <Flex p={50} alignItems="center" justifyContent="center">
                     <Box
                         bg={useColorModeValue('_','midnightGreen')}
                         _hover= {{ boxShadow: "dark-lg"}}
                         rounded="lg"
                         position="relative">
-                        <Circle
-                            size="40px"
-                            position="absolute"
-                            top={4}
-                            right={4}
-                            bg="red.200"
-                        ><Link href={props.github} isExternal>
-                        <Icon as={FaGithub}/>
-                        </Link> </Circle>
                         <Image
                             src={props.src || "https://media.giphy.com/media/93MrPOAnnWuNdnyDVZ/giphy.gif"}
                             alt={props.alt}

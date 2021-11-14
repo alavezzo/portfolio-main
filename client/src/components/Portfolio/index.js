@@ -1,8 +1,11 @@
 import React from 'react';
+import { useMediaQuery } from '@chakra-ui/media-query';
 import Project from '../Project';
 import CaptionCarousel from '../Carousel';
 
 const Portfolio = () => {
+
+    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)")
 
     const photos = [
         {
@@ -23,27 +26,16 @@ const Portfolio = () => {
             name: 'Employee Database Interface',
             href: 'https://github.com/alavezzo/employee-tracker#readme',
             github: 'employee-tracker',
-            alt: 'Interface Depiction'
-        },
-        {
-            name: 'Weather Dashboard',
-            href: 'https://alavezzo.github.io/weather-dashboard/',
-            github: 'weather-dashboard',
-            alt: 'Weather Dashboard SplashPage'
-        },
-        {
-            name: 'Work Day Scheduler',
-            href: 'https://alavezzo.github.io/work-day-scheduler',
-            github: 'work-day-scheduler',
-            alt: 'Workday Scheduler'
+            alt: 'Interface Depiction',
+            src: 'https://media.giphy.com/media/qAVT2mN2FY1FJgp8tg/giphy.gif'
         }
     ]
 
     return (
     <>
-    <CaptionCarousel>
-  
-    </CaptionCarousel>
+    { isNotSmallerScreen && (
+            <CaptionCarousel></CaptionCarousel>
+    )}
     <div className="flex-row">
     {photos.map((image) => {
         return (
