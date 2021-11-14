@@ -10,7 +10,7 @@ const Project = (props) => {
     return (
         <>
         
-        <Flex flexDirection={"row"}>
+        <Flex flexDirection={"column"}>
         {props.display && (
         <Box position={'relative'}>
         <Link href={props.href} isExternal>
