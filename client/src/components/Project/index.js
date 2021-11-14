@@ -9,16 +9,17 @@ const Project = (props) => {
         
     return (
         <>
+        
         <Flex flexDirection={"row"}>
-           <Link href={props.href} isExternal>
+        {props.display && (<Link href={props.href} isExternal>
                         <Box  p="8">
                             <Box d="flex">
-                                <Text color={useColorModeValue('midnightGreen')} m={"auto"}>
+                                <Text color={'midnightGreen'} m={"auto"}>
                                     {props.name}
                                 </Text>
                             </Box>
                         </Box>
-            </Link>
+            </Link>)}
             <Flex p={50} alignItems="center" justifyContent="center">
                     <Box
                         bg={useColorModeValue('_','midnightGreen')}
@@ -38,8 +39,6 @@ const Project = (props) => {
                             src={props.src || "https://media.giphy.com/media/93MrPOAnnWuNdnyDVZ/giphy.gif"}
                             alt={props.alt}
                             roundedTop="lg"
-                            width="450px"
-                            height="300px"
                         />
                     </Box>
                 </Flex>

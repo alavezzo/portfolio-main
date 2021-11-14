@@ -10,14 +10,14 @@ const Portfolio = () => {
             href: 'https://venue-covid-tracker.herokuapp.com/',
             github: 'covid-app',
             alt: 'Covid Venue Tracker SplashPage',
-            src: 'https://media.giphy.com/media/93MrPOAnnWuNdnyDVZ/giphy.gif'
+            src: 'https://media.giphy.com/media/onjwSpvcs1dGqyrrkv/giphy.gif'
         },
         {
             name: 'Cocktail and Music Pairings',
             href: 'https://alavezzo.github.io/prism/',
             github: 'prism',
             alt: 'Cocktail and Music Pairings SplashPage',
-            src: 'https://media.giphy.com/media/93MrPOAnnWuNdnyDVZ/giphy.gif'
+            src: 'https://media.giphy.com/media/pPirlhtP77nifbTuPc/giphy.gif'
         },
         {
             name: 'Employee Database Interface',
@@ -54,6 +54,7 @@ const Portfolio = () => {
          github={image.github}
          href={image.href}
          src={image.src}
+         display={true}
         />
         )
     })}
