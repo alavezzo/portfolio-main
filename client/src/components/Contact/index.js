@@ -59,7 +59,7 @@ const ContactForm = () => {
                         </Flex>
                     </FormControl>
                     <Box display="flex">
-                    <Button border={"1px"} box-sizing={"border-box"} borderColor={'midnightGreen'} width={["100px", "150px", "200px", "250px"]} margin={"auto"} color={useColorModeValue('midnightGreen')} bg={"white"} mt="2vh" data-testid='button' type="submit">Submit</Button>
+                    <Button border={"1px"} box-sizing={"border-box"} borderColor={'midnightGreen'} width={["100px", "150px", "200px", "250px"]} margin={"auto"} color={'midnightGreen'} bg={"white"} mt="2vh" data-testid='button' type="submit">Submit</Button>
                     </Box>
             </form>
         </Box>
