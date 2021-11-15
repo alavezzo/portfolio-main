@@ -1,9 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from '@chakra-ui/media-query';
-import loadable from '@loadable/component';
-
-const CaptionCarousel = loadable(() => import('../Carousel'));
-const Project = loadable(() => import('../Project'));
+import Project from '../Project';
+import CaptionCarousel from '../Carousel';
 
 const Portfolio = ({ photos }) => {
 
