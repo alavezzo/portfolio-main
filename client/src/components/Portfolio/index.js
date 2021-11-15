@@ -1,10 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from '@chakra-ui/media-query';
-
-import loadable from '@loadable/component';
-
-const Project = loadable(() => ('../Project'))
-const CaptionCarousel = loadable(()=> import('../Carousel'));
+import PortfolioCards from '../PortfolioCards';
+import Project from '../Project';
 
 const Portfolio = ({ photos }) => {
 
@@ -15,7 +12,7 @@ const Portfolio = ({ photos }) => {
     return (
     <>
     { isNotSmallerScreen && (
-            <CaptionCarousel photos={photos}></CaptionCarousel>
+            <PortfolioCards photos={photos}></PortfolioCards>
     )}
     <div className="flex-row">
     { !isNotSmallerScreen && (

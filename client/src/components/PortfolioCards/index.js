@@ -16,7 +16,7 @@ import {
 import { FaGithub } from 'react-icons/fa';
 
 
-export default function CaptionCarousel( {photos}) {
+export default function PortfolioCards( {photos}) {
 
   return (
     <>
