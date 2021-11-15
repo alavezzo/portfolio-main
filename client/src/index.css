@@ -18,7 +18,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#351431", en
 
 .navActive {
     color: blue;
-    text-size-adjust: 30%;
+    text-size-adjust: 130%;
     font-size: larger;
   }
 
