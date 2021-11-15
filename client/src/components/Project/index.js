@@ -40,6 +40,8 @@ const Project = (props) => {
                         rounded="lg"
                         position="relative">
                         <Image
+                            height="250px"
+                            width="400px"
                             src={props.src || "https://media.giphy.com/media/93MrPOAnnWuNdnyDVZ/giphy.gif"}
                             alt={props.alt}
                             roundedTop="lg"
