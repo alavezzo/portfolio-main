@@ -29,7 +29,7 @@ function Nav({ sections, setHome, home, currentSection, setCurrentSection }) {
                             style= {{ textDecoration: 'none' }}
                             key={section.name}
                             onClick={() => {setCurrentSection(section.name); setHome(false)}}
-                            className={`${currentSection === section.name && isDark && !home && 'navActive'} ${currentSection !== section.name && isDark && 'platinum'} ${currentSection === section.name && isDark && home && 'platinum'} ${currentSection === section.name && !isDark && !home && 'navActive'} ${currentSection !== section.name && !isDark && 'midnightGreen'} ${currentSection === section.name && !isDark && home && 'midnightGreen'} ` } to={`/${section.name}`}
+                            className={`nav ${currentSection === section.name && isDark && !home && 'navActive'} ${currentSection !== section.name && isDark && 'platinum'} ${currentSection === section.name && isDark && home && 'platinum'} ${currentSection === section.name && !isDark && !home && 'navActive'} ${currentSection !== section.name && !isDark && 'darkPurple'} ${currentSection === section.name && !isDark && home && 'darkPurple'} ` } to={`/${section.name}`}
                             >
                                 <Text display="block" >{section.name}</Text>
                             </Link>

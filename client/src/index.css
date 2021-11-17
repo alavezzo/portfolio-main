@@ -16,8 +16,11 @@ background: -webkit-linear-gradient(90deg, hsla(307, 45%, 14%, 1) 0%, hsla(355, 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#351431", endColorstr="#F1515E", GradientType=1 );
 }
 
+.nav:hover {
+    color: #F1515E
+}
 .navActive {
-    color: blue;
+    color: #F1515E;
     text-size-adjust: 130%;
     font-size: larger;
   }
@@ -28,4 +31,20 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#351431", en
 
 .midnightGreen {
     color: #02394A,
+}
+
+.project-name:after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 2px solid #DFE0DC;
+    margin: 10px auto;
+}
+
+.project:after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 2px solid #02394A;
+    margin: 10px auto;
 }

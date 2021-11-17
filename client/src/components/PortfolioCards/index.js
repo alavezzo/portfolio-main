@@ -36,7 +36,7 @@ export default function PortfolioCards( {photos}) {
             backgroundSize="cover"
             backgroundImage={card.image}>
             {/* This is the block you need to change, to customize the caption */}
-            <Flex paddingLeft={20} paddingRight={20} flexDirection={"row"}>
+            <Flex paddingLeft={10,10, 10, 20} paddingRight={[10,10,10,20]} flexDirection={"row"}>
             <Container size="container.lg" height="400px" position="relative">
               <Stack
                 spacing={6}
