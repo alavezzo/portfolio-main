@@ -6,7 +6,7 @@ export default function About() {
   
 
   return (
-    <Flex w="80%" direction={['column', 'column', 'row', 'row']} align={'center'}>
+    <Flex w="80%" direction={['column', 'column', 'row', 'row']} paddingTop={[20, 20, 0, 0]} paddingBottom={[10, 10, 0, 0]} align={'center'}>
         <Box>
         <Text
             color={useColorModeValue('darkPurple','platinum')}
