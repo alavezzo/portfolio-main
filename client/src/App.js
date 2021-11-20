@@ -16,19 +16,31 @@ import blue from './assets/backgrounds/blue.jpg'
 function App() {
   const photos = [
     {
-        text: 'Crowdsourced Covid-19 safety reviews of local venues. Built with a MVC framework using Handlebars, Express, MySql, and Node',
-        image: yellow,
-        name: 'Covid Venue Tracker',
-        href: 'https://venue-covid-tracker.herokuapp.com/',
-        github: 'http://github.com/alavezzo/covid-app#readme',
-        alt: 'Covid Venue Tracker SplashPage',
-        src: 'https://media.giphy.com/media/onjwSpvcs1dGqyrrkv/giphy.gif',
-        bg: 'red.300'
-      },
+      title: 'Toilet SOS',
+      text:
+          "This app locates nearby public restrooms. Users can view details pertaining to each restroom and leave reviews. User also can submit a new restroom entry that will populate to their current location. Built with the MERN stack, Apollo Client, GraphQL, Google Maps API, and the navigator.geolocation API",
+      image: yellow,
+      name: 'Toilet SOS',
+      href: 'project-toilet.herokuapp.com',
+      github: 'https://github.com/eisforgene/project-toilet#readme',
+      alt: 'Interface Depiction',
+      src: require('./assets/projects/ToiletSOS.gif').default,
+      bg: 'blue.300'
+    },
+    // {
+    //     text: 'Crowdsourced Covid-19 safety reviews of local venues. Built with a MVC framework using Handlebars, Express, MySql, and Node',
+    //     image: blue,
+    //     name: 'Covid Venue Tracker',
+    //     href: 'https://venue-covid-tracker.herokuapp.com/',
+    //     github: 'http://github.com/alavezzo/covid-app#readme',
+    //     alt: 'Covid Venue Tracker SplashPage',
+    //     src: 'https://media.giphy.com/media/onjwSpvcs1dGqyrrkv/giphy.gif',
+    //     bg: 'red.300'
+    //   },
       {
-        title: 'Design Projects 2',
+        title: 'Cocktail and Music Pairings',
         text:
-          "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+          "This application returns a list of music recommended to pair with a selected cocktail. Users can add their favorite music to a favorites list that is stored locally. Built with JQuery, HTMl, and Bootstrap CSS.",
         image: blue,
           name: 'Cocktail and Music Pairings',
           href: 'https://alavezzo.github.io/prism/',
@@ -38,9 +50,9 @@ function App() {
           bg: 'green.200'
       },
       {
-        title: 'Design Projects 3',
+        title: 'Employee Database Interface',
         text:
-          "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+          "This command line application guides users as they interface with a MySql database storing Employee information. Built with node.js, inquirer, and MySql.",
         image: pink,
         name: 'Employee Database Interface',
         href: 'https://github.com/alavezzo/employee-tracker#readme',
