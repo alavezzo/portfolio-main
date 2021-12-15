@@ -10,8 +10,10 @@ import {
   Flex,
   Container,
   Icon,
-  Circle
+  Circle,
+  VStack
 } from '@chakra-ui/react';
+import { useColorModeValue } from '@chakra-ui/react';
 
 import { FaGithub } from 'react-icons/fa';
 
@@ -20,7 +22,13 @@ export default function PortfolioCards( {photos}) {
 
   return (
     <>
-    <Spacer padding={10}></Spacer>
+    <VStack>
+    <Spacer padding={4}></Spacer>
+    <Text color={useColorModeValue('darkPurple','platinum')}
+            fontSize={{ base: 'xl', md: '2xl' }}
+            align={'left'}
+            width={['xs','md', '2xl', '4xl']}>Coding...</Text>
+    </VStack>
     {photos.map((card, index) => (
     <Box
       position={'relative'}
@@ -35,8 +43,7 @@ export default function PortfolioCards( {photos}) {
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
             backgroundImage={card.image}>
-            {/* This is the block you need to change, to customize the caption */}
-            <Flex paddingLeft={10,10, 10, 20} paddingRight={[10,10,10,20]} flexDirection={"row"}>
+            <Flex paddingLeft={[10,10, 10, 20]} paddingRight={[10,10,10,20]} flexDirection={"row"}>
             <Container size="container.lg" height="400px" position="relative">
               <Stack
                 spacing={6}

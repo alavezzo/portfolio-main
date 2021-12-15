@@ -37,7 +37,7 @@ const ContactForm = () => {
 
     return (
         <>
-        <Spacer padding="5vh"></Spacer>
+        <Spacer padding={4}></Spacer>
         <Box p='4' borderRadius='md' bg={useColorModeValue()} w={["75%", "60%", "60%", "40%"]}>
             <form onSubmit={handleSubmit}>
                     <FormControl paddingRight={["0","0","10", "10"]} isRequired >

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Box, Stack, Text, Divider } from '@chakra-ui/react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useColorMode } from '@chakra-ui/color-mode'
 
@@ -35,10 +35,11 @@ function Nav({ sections, setHome, home, currentSection, setCurrentSection }) {
                             </Link>
                         )
                     })}
-             
+              
             </Stack>
            
         </Box>
+        <Divider width={'xs'}></Divider>
         </>
     )
 
